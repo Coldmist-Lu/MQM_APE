@@ -100,18 +100,5 @@ Based on our analysis, we provide a guide on how to select LLMs as translation e
 
 > 3. MQM-APE introduces acceptable costs against GEMBA-MQM, and preserves error distribution across severities and categories.
 
-Please refer to our [arXiv preprint](https://arxiv.org/pdf/2303.13809.pdf) for more details.
-
-## Citation
-If you find this work helpful, please consider citing as follows:  
-
-```ruby
-@article{Lu2024MQMAPE,
-  title={MQM-APE: Toward High-Quality Error Annotation Predictors with Automatic Post-Editing in LLM Translation Evaluators},
-  author={Lu, Qingyu and Ding, Liang and Zhang, Kanjian and Zhang, Jinxia and Tao, Dacheng},
-  journal={arXiv preprint},
-  url={https://arxiv.org/pdf/2303.13809.pdf},
-  year={2024}
-}
-```
+Please refer to our arXiv preprint for more details.
 
