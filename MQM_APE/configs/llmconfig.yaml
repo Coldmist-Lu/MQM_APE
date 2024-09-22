@@ -1,0 +1,15 @@
+inference:
+  model_path: "/path/to/llm" # path to large language model
+  tp: 1 # tensor parallel
+
+evaluator:
+  temperature: 0
+  max_tokens: 512 # maximum number of tokens generated
+
+ape:
+  temperature: 0
+  max_tokens: 512
+
+verifier:
+  temperature: 0
+  max_tokens: 256

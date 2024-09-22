@@ -1,0 +1,235 @@
+[
+    {
+        "source_lang": "Chinese",
+        "source_seg": "是否有途径处罚他",
+        "target_lang": "English",
+        "target_seg": "Is there a way to punish him",
+        "cometkiwi_score": 0.8487105965614319,
+        "error_dict": {
+            "critical": [],
+            "major": [],
+            "minor": []
+        },
+        "MQM_APE_score": 0
+    },
+    {
+        "source_lang": "Chinese",
+        "source_seg": "以免再次发生这样的事情",
+        "target_lang": "English",
+        "target_seg": "In case such a thing happens again",
+        "cometkiwi_score": 0.7983196973800659,
+        "error_dict": {
+            "critical": [],
+            "major": [],
+            "minor": []
+        },
+        "MQM_APE_score": 0
+    },
+    {
+        "source_lang": "Chinese",
+        "source_seg": "又或者餐厅还要多久会准备好？可不可以帮我问下？",
+        "target_lang": "English",
+        "target_seg": "Or how long before the restaurant is ready? Can you ask for me?",
+        "cometkiwi_score": 0.7136572003364563,
+        "error_dict": {
+            "critical": [],
+            "major": [],
+            "minor": [
+                {
+                    "category": "fluency/register",
+                    "span": "ask for me",
+                    "post_edit": "Or how long before the restaurant is ready? Could you check on that for me?",
+                    "postedit_cometkiwi_score": 0.7762035131454468,
+                    "pe_valid_score": 1
+                }
+            ]
+        },
+        "MQM_APE_score": -1
+    },
+    {
+        "source_lang": "Chinese",
+        "source_seg": "浙大学术年会上学生唱主角 研究成果让人脑洞大开-新华网",
+        "target_lang": "English",
+        "target_seg": "At the academic annual meeting of Zhejiang University, the research results of students playing the leading role make people's brains open-Xinhuanet",
+        "cometkiwi_score": 0.7529460191726685,
+        "error_dict": {
+            "critical": [
+                {
+                    "category": "accuracy/mistranslation",
+                    "span": "playing the leading role",
+                    "post_edit": "At the academic annual meeting of Zhejiang University, students take center stage with research results that blow people's minds-Xinhuanet",
+                    "postedit_cometkiwi_score": 0.7994742393493652,
+                    "pe_valid_score": 1
+                }
+            ],
+            "major": [
+                {
+                    "category": "accuracy/mistranslation",
+                    "span": "make people's brains open",
+                    "post_edit": "At the academic annual meeting of Zhejiang University, the research results of students playing the leading role blow people's minds-Xinhuanet",
+                    "postedit_cometkiwi_score": 0.7272830605506897,
+                    "pe_valid_score": 0.5
+                }
+            ],
+            "minor": [
+                {
+                    "category": "fluency/grammar",
+                    "span": "At the academic annual meeting of Zhejiang University, the research results of students",
+                    "post_edit": "At Zhejiang University's academic annual meeting, students take center stage with research results that blow people's minds-Xinhuanet",
+                    "postedit_cometkiwi_score": 0.8004761934280396,
+                    "pe_valid_score": 1
+                }
+            ]
+        },
+        "MQM_APE_score": -25
+    },
+    {
+        "source_lang": "Chinese",
+        "source_seg": "用空气来洗手，哈口气判断疾病，精确搜寻雾霾来源 昨天晚上，在浙江大学2016年学术年会开幕式上，一系列脑洞大开的学术成果获得表彰。",
+        "target_lang": "English",
+        "target_seg": "Wash your hands with air, judge diseases with breath, and accurately search for the source of smog. Last night, at the opening ceremony of the 2016 Academic Annual Meeting of Zhejiang University, a series of academic achievements with wide brain holes were commended.",
+        "cometkiwi_score": 0.7526636719703674,
+        "error_dict": {
+            "critical": [
+                {
+                    "category": "accuracy/mistranslation",
+                    "span": "wide brain holes",
+                    "post_edit": "Wash your hands with air, judge diseases with breath, and accurately search for the source of smog. Last night, at the opening ceremony of the 2016 Academic Annual Meeting of Zhejiang University, a series of groundbreaking academic achievements were commended.",
+                    "postedit_cometkiwi_score": 0.8150240182876587,
+                    "pe_valid_score": 1
+                }
+            ],
+            "major": [
+                {
+                    "category": "accuracy/mistranslation",
+                    "span": "judge diseases with breath",
+                    "post_edit": "Wash your hands with air, diagnose diseases with exhaled breath, and accurately search for the source of smog. Last night, at the opening ceremony of the 2016 Academic Annual Meeting of Zhejiang University, a series of academic achievements with wide brain holes were commended.",
+                    "postedit_cometkiwi_score": 0.755865216255188,
+                    "pe_valid_score": 0.5
+                },
+                {
+                    "category": "accuracy/mistranslation",
+                    "span": "accurately search for the source of smog",
+                    "post_edit": "Wash your hands with air, judge diseases with breath, and pinpoint the source of smog. Last night, at the opening ceremony of the 2016 Academic Annual Meeting of Zhejiang University, a series of academic achievements with wide brain holes were commended.",
+                    "postedit_cometkiwi_score": 0.7465033531188965,
+                    "pe_valid_score": 0.5
+                }
+            ],
+            "minor": []
+        },
+        "MQM_APE_score": -25
+    },
+    {
+        "source_lang": "Chinese",
+        "source_seg": "这些成果的主要研究者都是学生，研究覆盖了环境、机械、能源、医疗、生命科学、人文教育等各大领域，同学们从一个好奇的点子开始，创造出了许多具有应用价值的高端发明，其中一些项目已在国内国际获奖。",
+        "target_lang": "English",
+        "target_seg": "The main researchers of these achievements are students, and the research covers various fields such as environment, machinery, energy, medical care, life sciences, humanities education, etc. The students started from a curious idea and created many high-end inventions with application value, some of which have won awards at home and abroad.",
+        "cometkiwi_score": 0.8469164967536926,
+        "error_dict": {
+            "critical": [],
+            "major": [],
+            "minor": []
+        },
+        "MQM_APE_score": 0
+    },
+    {
+        "source_lang": "Chinese",
+        "source_seg": "生物传感器：你的家庭体检医生",
+        "target_lang": "English",
+        "target_seg": "Biosensor: Your family medical examiner",
+        "cometkiwi_score": 0.8204300403594971,
+        "error_dict": {
+            "critical": [],
+            "major": [
+                {
+                    "category": "accuracy/mistranslation",
+                    "span": "medical examiner",
+                    "post_edit": "Biosensor: Your Family Doctor",
+                    "postedit_cometkiwi_score": 0.8105576038360596,
+                    "pe_valid_score": 0.5
+                }
+            ],
+            "minor": []
+        },
+        "MQM_APE_score": -2.5
+    },
+    {
+        "source_lang": "Chinese",
+        "source_seg": "生物医学工程学院博士生张迪鸣团队现场展示了一个智能手机端的生物传感器，大小只有智能手机的一半。",
+        "target_lang": "English",
+        "target_seg": "Zhang Diming, a doctoral student at the School of Biomedical Engineering, showed a biosensor on the smart phone, which is only half the size of a smart phone.",
+        "cometkiwi_score": 0.8122748136520386,
+        "error_dict": {
+            "critical": [],
+            "major": [
+                {
+                    "category": "accuracy/mistranslation",
+                    "span": "on the smart phone",
+                    "post_edit": "Zhang Diming, a doctoral student at the School of Biomedical Engineering, showed a smartphone-based biosensor, which is only half the size of a smart phone.",
+                    "postedit_cometkiwi_score": 0.8233796954154968,
+                    "pe_valid_score": 0.5
+                }
+            ],
+            "minor": [
+                {
+                    "category": "fluency/grammar",
+                    "span": "which is only half the size of a smart phone",
+                    "post_edit": "Zhang Diming, a doctoral student at the School of Biomedical Engineering, showed a biosensor on a smartphone platform, half the size of a regular smartphone.",
+                    "postedit_cometkiwi_score": 0.8121116161346436,
+                    "pe_valid_score": 0.5
+                }
+            ]
+        },
+        "MQM_APE_score": -3.0
+    },
+    {
+        "source_lang": "Chinese",
+        "source_seg": "“你只需要轻轻呼一口气，这套仪器就能从你呼出的气体成分中，初步检测身体健康状况 。 ”",
+        "target_lang": "English",
+        "target_seg": "\"You only need to take a gentle breath, and this instrument can initially detect your health from the gas composition you exhale.\"",
+        "cometkiwi_score": 0.838397741317749,
+        "error_dict": {
+            "critical": [],
+            "major": [],
+            "minor": [
+                {
+                    "category": "accuracy/omission",
+                    "span": "body's",
+                    "post_edit": "You only need to take a gentle breath, and this instrument can initially detect your body's health from the gas composition you exhale.",
+                    "postedit_cometkiwi_score": 0.8369182348251343,
+                    "pe_valid_score": 0.5
+                }
+            ]
+        },
+        "MQM_APE_score": -0.5
+    },
+    {
+        "source_lang": "Chinese",
+        "source_seg": "张迪鸣介绍说，这套传感器与智能手机相连，呼出气体后，健康报告就会显示在手机上。",
+        "target_lang": "English",
+        "target_seg": "Zhang Diming said that this sensor is connected to the smart phone, and the health report will be displayed on the phone after exhaling air.",
+        "cometkiwi_score": 0.8194879293441772,
+        "error_dict": {
+            "critical": [],
+            "major": [
+                {
+                    "category": "accuracy/mistranslation",
+                    "span": "呼出气体",
+                    "post_edit": "Zhang Diming said that this sensor is connected to the smart phone, and the health report will be displayed on the phone after breathing out.",
+                    "postedit_cometkiwi_score": 0.8018499612808228,
+                    "pe_valid_score": 0.5
+                }
+            ],
+            "minor": [
+                {
+                    "category": "fluency/grammar",
+                    "span": "and",
+                    "post_edit": "Zhang Diming said that this sensor is connected to the smartphone, and after exhaling air, the health report will be displayed on the phone.",
+                    "postedit_cometkiwi_score": 0.8289327025413513,
+                    "pe_valid_score": 0.5
+                }
+            ]
+        },
+        "MQM_APE_score": -3.0
+    }
+]

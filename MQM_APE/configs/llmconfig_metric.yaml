@@ -1,0 +1,15 @@
+inference:
+  model_path: "/path/to/llm" # path to large language model
+  tp: 1 # tensor parallel
+
+evaluator:
+  temperature: 0
+  max_tokens: 512 # maximum number of tokens generated
+
+ape:
+  temperature: 0
+  max_tokens: 512
+
+verifier:
+  metric_path: "/path/to/model.ckpt" # path to cometkiwi checkpoint
+  metric_threshold: 0.03 # score threshold to judge between APE and target translation
