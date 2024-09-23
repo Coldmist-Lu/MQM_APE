@@ -32,9 +32,12 @@ Please refer to [./MQM_APE/run.sh](./MQM_APE/run.sh) for an example of using MQM
 cd ./MQM_APE
 
 python3 main.py \
-  --config CONFIG \
-  --src SRC --tgt TGT --srclang SRCLANG --tgtlang TGTLANG \
-  --out OUT \
+  --config ./configs/llmconfig.yaml \
+  --src ./test/srcs_zh.txt \
+  --tgt ./test/tgts_en.txt \
+  --srclang Chinese \
+  --tgtlang English \
+  --out ./test/outs/llm_verifier \
   [--metric_verifier] [--save_llm_response]
 ```
 
@@ -50,7 +53,7 @@ MQM-APE can be performed in two ways, differing in the verifier module, which ca
 
 * **tgtlang**: Target language, such as "English", "Chinese".
 
-* **out**: The path of output annotations, scores and other informations.
+* **out**: The path of output annotations, scores and other informations. A example output can be found in [./MQM_APE/test/outs/](./MQM_APE/test/outs/).
 
 * **metric_verifier**: A bool value controlling whether COMETKiwi is used to replace LLM verifier.
 
