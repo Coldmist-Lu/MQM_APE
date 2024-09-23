@@ -14,6 +14,16 @@ Large Language Models (LLMs) have shown significant potential as judges for Mach
     <img width="80%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/main.jpg">
 </div>
 
+> We employ MQM-APE by prompting the same LLM to perform multiple roles without fine-tuning for each task. MQM-APE evaluates a given translation $y$ of source $x$ through three sequential modules:
+
+1. **Error Analysis Evaluator** identifies errors in $y$, providing error demonstrations $\mathcal{E}$ with error span, category and severity;
+
+2. **Automatic Post-Editor** post-edits $y$ based on each identified error $e_i \in \mathcal{E}$, producing a set of corrected translations $\mathcal{Y}_{pe}$;
+
+3. **Pairwise Quality Verifier** checks whether the post-edited translations improve upon the original translation $y$. 
+
+> Errors for which the APE translation fails to improve on the original are discarded, leaving a refined set of errors $\mathcal{E}^* \in \mathcal{E}$ that contribute to quality improvement. The translation is finally scored based on $\mathcal{E}^*$ following the MQM weighting scheme.
+
 ## How to Use MQM-APE?
 
 Please refer to [./MQM_APE/run.sh](./MQM_APE/run.sh) for an example of using MQM-APE.
@@ -21,7 +31,11 @@ Please refer to [./MQM_APE/run.sh](./MQM_APE/run.sh) for an example of using MQM
 ```bash
 cd ./MQM_APE
 
-python3 main.py [-h] --config CONFIG --src SRC --tgt TGT --srclang SRCLANG --tgtlang TGTLANG --out OUT [--metric_verifier] [--save_llm_response]
+python3 main.py \
+  --config CONFIG \
+  --src SRC --tgt TGT --srclang SRCLANG --tgtlang TGTLANG \
+  --out OUT \
+  [--metric_verifier] [--save_llm_response]
 ```
 
 MQM-APE can be performed in two ways, differing in the verifier module, which can use either an LLM or a metric ([COMETKiwi](https://aclanthology.org/2022.wmt-1.60.pdf) in our experiments). Here is the introduction of the parameters:
@@ -64,10 +78,10 @@ MQM-APE is a **training-free** approach that improves upon GEMBA-MQM and complem
 ## Performance Comparison Between GEMBA-MQM and MQM-APE on Different LLMs
 
 <div align="center">
-    <img width="80%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/image.png">
+    <img width="80%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/main_res.png">
 </div>
 
->Comparison of performance between GEMBA-MQM ("MQM") and MQM-APE on WMT22 with human-labeled MQM, evaluated using pairwise accuracy (\%) at the system level, pairwise accuracy with tie calibration (\%) at the segment level, and error span precision of errors (SP) and major errors (MP), respectively.
+>Table: Comparison of performance between GEMBA-MQM ("MQM") and MQM-APE on WMT22 with human-labeled MQM, evaluated using pairwise accuracy (\%) at the system level, pairwise accuracy with tie calibration (\%) at the segment level, and error span precision of errors (SP) and major errors (MP), respectively.
 
 >Building upon GEMBA-MQM, our purposed MQM-APE has the following advantages:
 
@@ -94,11 +108,35 @@ Based on our analysis, we provide a guide on how to select LLMs as translation e
 
 ## Other Results and Findings of the Paper
 
-> 1. APE translations exhibit superior overall quality compared to the original translations.
+#### 1. APE translations exhibit superior overall quality compared to the original translations.
 
-> 2. Quality Verifier aligns with modern metrics like [COMETKiwi](https://aclanthology.org/2022.wmt-1.60.pdf), which can be replaced by these metrics with comparable effects.
+<div align="center">
+    <img width="80%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/ape.png">
+</div>
 
-> 3. MQM-APE introduces acceptable costs against GEMBA-MQM, and preserves error distribution across severities and categories.
+> Table: **Performance of Automatic Post Editor** measured with $\text{CometKiwi}_{22}^{\text{QE}}$ and $\text{BLEURT}_{20}$. "$\dag$" indicates that the metrics difference ($\Delta$) has >95\% estimated accuracy with humans ([kocmi et al., 2024](https://aclanthology.org/2024.acl-long.110.pdf)). For segment comparison, we define *Win* as cases where both $\text{CometKiwi}_{22}^{\text{QE}}$ and $\text{BLEURT}_{20}$ rate APE higher than TGT, *Lose* where they rate APE lower, and *Tie* when their evaluations conflict.
+
+#### 2. Quality Verifier aligns with modern metrics like [COMETKiwi](https://aclanthology.org/2022.wmt-1.60.pdf) and [BLEURT20](https://aclanthology.org/2020.acl-main.704).
+
+<div align="center">
+    <img width="80%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/verifier.png">
+</div>
+
+> Table: **Comparison of the pairwise quality verifier's consistency** with $\text{CometKiwi}_{22}^{\text{QE}}$ and $\text{BLEURT}_{20}$, which serve as ground truth.
+
+#### 3. MQM-APE exhibits superior perfomance compared to random error filter.
+
+#### 4. MQM-APE introduces an acceptable inference cost compared to GEMBA-MQM. 
+
+<div align="center">
+    <img width="80%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/inference.png">
+</div>
+
+> Table: **Analysis of inference cost** averaged for each segment across different LLMs for each module, presenting input and generated tokens seperately.
+
+#### 5. A cost-reducing alternative of implementing MQM-APE is to replace the verifier with metrics for comparable performance.
+
+#### 6. MQM-APE preserves error distribution across severities and categories.
 
 Please refer to our arXiv preprint for more details.
 
