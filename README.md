@@ -127,7 +127,7 @@ Based on our analysis, we provide a guide on how to select LLMs as translation e
 ### 3. MQM-APE exhibits superior performance compared to random error filter.
 
 <div align="center">
-    <img width="40%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/random_compare_seg.png">
+    <img width="40%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/randomcompare_seg.png">
 </div>
 
 > Figure: **Comparison between MQM-APE, random error filter ("Random")** and GEMBA-MQM ("MQM") on segment-level performance.
@@ -157,7 +157,7 @@ Based on our analysis, we provide a guide on how to select LLMs as translation e
     <img width="80%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/category_pie.png">
 </div>
 
-> Figure: (Left) Average Number of errors retained or discarded for each severity level with MQM-APE. (Right) Distribution of error categories generated from GEMBA-MQM ("MQM") evaluator, MQM-APE, discarded errors, and human-annotated MQM, respectively.
+> Figure: (Upper) Average Number of errors retained or discarded for each severity level with MQM-APE. (Lower) Distribution of error categories generated from GEMBA-MQM ("MQM") evaluator, MQM-APE, discarded errors, and human-annotated MQM, respectively.
 
 Please refer to our arXiv preprint for more details.
 
