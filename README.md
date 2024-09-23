@@ -81,7 +81,7 @@ MQM-APE is a **training-free** approach that improves upon GEMBA-MQM and complem
 ## Performance Comparison Between GEMBA-MQM and MQM-APE on Different LLMs
 
 <div align="center">
-    <img width="80%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/main_res.png">
+    <img width="95%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/main_res.png">
 </div>
 
 >Table: Comparison of performance between GEMBA-MQM ("MQM") and MQM-APE on WMT22 with human-labeled MQM, evaluated using pairwise accuracy (\%) at the system level, pairwise accuracy with tie calibration (\%) at the segment level, and error span precision of errors (SP) and major errors (MP), respectively.
