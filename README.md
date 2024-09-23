@@ -124,9 +124,15 @@ Based on our analysis, we provide a guide on how to select LLMs as translation e
 
 > Table: **Comparison of the pairwise quality verifier's consistency** with $CometKiwi_{22}^{QE}$ and $BLEURT_{20}$, which serve as ground truth.
 
-#### 3. MQM-APE exhibits superior perfomance compared to random error filter.
+### 3. MQM-APE exhibits superior performance compared to random error filter.
 
-#### 4. MQM-APE introduces an acceptable inference cost compared to GEMBA-MQM. 
+<div align="center">
+    <img width="40%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/random_compare_seg.png">
+</div>
+
+> Figure: **Comparison between MQM-APE, random error filter ("Random")** and GEMBA-MQM ("MQM") on segment-level performance.
+
+### 4. MQM-APE introduces an acceptable inference cost compared to GEMBA-MQM. 
 
 <div align="center">
     <img width="80%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/inference.png">
@@ -134,9 +140,24 @@ Based on our analysis, we provide a guide on how to select LLMs as translation e
 
 > Table: **Analysis of inference cost** averaged for each segment across different LLMs for each module, presenting input and generated tokens seperately.
 
-#### 5. A cost-reducing alternative of implementing MQM-APE is to replace the verifier with metrics for comparable performance.
+### 5. A cost-reducing alternative of implementing MQM-APE is to replace the verifier with metrics for comparable performance.
+
+<div align="center">
+    <img width="80%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/metriccompare.png">
+</div>
+
+> Figure: **Comparison between MQM-APE with an LLM verifier and viwh $COMETKiwi_{22}^{QE}$** as a replacement on segment-level performance.
 
 #### 6. MQM-APE preserves error distribution across severities and categories.
+
+<div align="center">
+    <img width="80%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/errordist.png">
+</div>
+<div align="center">
+    <img width="80%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/category_pie.png">
+</div>
+
+> Figure: (Left) Average Number of errors retained or discarded for each severity level with MQM-APE. (Right) Distribution of error categories generated from GEMBA-MQM ("MQM") evaluator, MQM-APE, discarded errors, and human-annotated MQM, respectively.
 
 Please refer to our arXiv preprint for more details.
 
