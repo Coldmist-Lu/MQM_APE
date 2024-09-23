@@ -108,21 +108,21 @@ Based on our analysis, we provide a guide on how to select LLMs as translation e
 
 ## Other Results and Findings of the Paper
 
-#### 1. APE translations exhibit superior overall quality compared to the original translations.
+### 1. APE translations exhibit superior overall quality compared to the original translations.
 
 <div align="center">
     <img width="80%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/ape.png">
 </div>
 
-> Table: **Performance of Automatic Post Editor** measured with $\text{CometKiwi}_{22}^{\text{QE}}$ and $\text{BLEURT}_{20}$. "$\dag$" indicates that the metrics difference ($\Delta$) has >95\% estimated accuracy with humans ([kocmi et al., 2024](https://aclanthology.org/2024.acl-long.110.pdf)). For segment comparison, we define *Win* as cases where both $\text{CometKiwi}_{22}^{\text{QE}}$ and $\text{BLEURT}_{20}$ rate APE higher than TGT, *Lose* where they rate APE lower, and *Tie* when their evaluations conflict.
+> Table: **Performance of Automatic Post Editor** measured with $CometKiwi_{22}^{QE}$ and $BLEURT_{20}$. "†" indicates that the metrics difference ($\Delta$) has >95\% estimated accuracy with humans ([kocmi et al., 2024](https://aclanthology.org/2024.acl-long.110.pdf)). For segment comparison, we define *Win* as cases where both $CometKiwi_{22}^{QE}$ and $BLEURT_{20}$ rate APE higher than TGT, *Lose* where they rate APE lower, and *Tie* when their evaluations conflict.
 
-#### 2. Quality Verifier aligns with modern metrics like [COMETKiwi](https://aclanthology.org/2022.wmt-1.60.pdf) and [BLEURT20](https://aclanthology.org/2020.acl-main.704).
+### 2. Quality Verifier aligns with modern metrics like [COMETKiwi](https://aclanthology.org/2022.wmt-1.60.pdf) and [BLEURT20](https://aclanthology.org/2020.acl-main.704).
 
 <div align="center">
-    <img width="80%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/verifier.png">
+    <img width="40%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/verifier.png">
 </div>
 
-> Table: **Comparison of the pairwise quality verifier's consistency** with $\text{CometKiwi}_{22}^{\text{QE}}$ and $\text{BLEURT}_{20}$, which serve as ground truth.
+> Table: **Comparison of the pairwise quality verifier's consistency** with $CometKiwi_{22}^{QE}$ and $BLEURT_{20}$, which serve as ground truth.
 
 #### 3. MQM-APE exhibits superior perfomance compared to random error filter.
 
