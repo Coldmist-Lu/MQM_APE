@@ -2,7 +2,7 @@
 
 <b>MQM-APE: Toward High-Quality Error Annotation Predictors with Automatic Post-Editing in LLM Translation Evaluators</b>. [Full paper](Published on arXiv soon)
 
-This repository presents MQM-APE, an enhanced framework for leveraging LLMs in translation evaluation. We also provide the test performance results of MQM-APE for the replication of the study.
+This repository presents MQM-APE, an enhanced framework for leveraging LLMs in translation evaluation. We also provide the performance of MQM-APE for the replication of the study.
 
 ## Abstract
 
