@@ -14,7 +14,7 @@ Large Language Models (LLMs) have shown significant potential as judges for Mach
     <img width="80%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/main.jpg">
 </div>
 
-> We employ MQM-APE by prompting the same LLM to perform multiple roles without fine-tuning for each task. MQM-APE evaluates a given translation $y$ of source $x$ through three sequential modules:
+We employ MQM-APE by prompting the same LLM to perform multiple roles without fine-tuning for each task. MQM-APE evaluates a given translation $y$ of source $x$ through three sequential modules:
 
 1. **Error Analysis Evaluator** identifies errors in $y$, providing error demonstrations $\mathcal{E}$ with error span, category and severity;
 
@@ -86,7 +86,7 @@ MQM-APE is a **training-free** approach that improves upon GEMBA-MQM and complem
 
 >Table: Comparison of performance between GEMBA-MQM ("MQM") and MQM-APE on WMT22 with human-labeled MQM, evaluated using pairwise accuracy (\%) at the system level, pairwise accuracy with tie calibration (\%) at the segment level, and error span precision of errors (SP) and major errors (MP), respectively.
 
->Building upon GEMBA-MQM, our purposed MQM-APE has the following advantages:
+Building upon GEMBA-MQM, our purposed MQM-APE has the following advantages:
 
 1. **Better Reliability**: MQM-APE consistently enhances GEMBA-MQM at both system and segment levels.
 
@@ -151,7 +151,7 @@ Based on our analysis, we provide a guide on how to select LLMs as translation e
 
 > Figure: **Comparison between MQM-APE with an LLM verifier and viwh $COMETKiwi_{22}^{QE}$** as a replacement on segment-level performance.
 
-#### 6. MQM-APE preserves error distribution across severities and categories.
+### 6. MQM-APE preserves error distribution across severities and categories.
 
 <div align="center">
     <img width="80%" alt="image" src="https://github.com/Coldmist-Lu/MQM_APE/blob/main/sources/errordist.png">
