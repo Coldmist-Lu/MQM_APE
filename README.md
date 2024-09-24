@@ -1,6 +1,6 @@
 # MQM-APE
 
-<b>MQM-APE: Toward High-Quality Error Annotation Predictors with Automatic Post-Editing in LLM Translation Evaluators</b>. [Full paper](Published on arXiv soon)
+<b>MQM-APE: Toward High-Quality Error Annotation Predictors with Automatic Post-Editing in LLM Translation Evaluators</b>. [Full paper](https://arxiv.org/pdf/2409.14335)
 
 This repository presents MQM-APE, an enhanced framework for leveraging LLMs in translation evaluation. We also provide the performance of MQM-APE for the replication of the study.
 
@@ -162,5 +162,18 @@ Based on our analysis, we provide a guide on how to select LLMs as translation e
 
 > Figure: (Upper) Average Number of errors retained or discarded for each severity level with MQM-APE. (Lower) Distribution of error categories generated from GEMBA-MQM ("MQM") evaluator, MQM-APE, discarded errors, and human-annotated MQM, respectively.
 
-Please refer to our arXiv preprint for more details.
+Please refer to our [arXiv preprint](https://arxiv.org/pdf/2409.14335) for more details.
+
+## Citation
+If you find this work helpful, please consider citing as follows:  
+
+```ruby
+@article{Lu2024MQMAPE,
+  title={MQM-APE: Toward High-Quality Error Annotation Predictors with Automatic Post-Editing in LLM Translation Evaluators},
+  author={Lu, Qingyu and Ding, Liang and Zhang, Kanjian and Zhang, Jinxia and Tao, Dacheng},
+  journal={arXiv preprint},
+  url={https://arxiv.org/pdf/2409.14335},
+  year={2024}
+}
+```
 
